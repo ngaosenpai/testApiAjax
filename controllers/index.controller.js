@@ -1,16 +1,16 @@
 
 module.exports.index = (req, res) => {
 	res.render("index", {
-		page : 0,
+		page : "bg-secondary",
 		pageName: "Trang chu"
 	})
 }
 
 module.exports.routing = (req, res) => {
 	const pages = {
-		"about" : 1,
-		"service" : 2,
-		"contact" : 3,
+		"about" : "bg-primary",
+		"service" : "bg-warning",
+		"contact" : "bg-dark",
 	}
 	if(req.params.page in pages)
 		res.render("index", {

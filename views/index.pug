@@ -26,7 +26,15 @@ nav.navbar.navbar-expand-md.navbar-dark.bg-dark
       p
         | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum dolorum consectetur, labore non natus id earum? Natus consectetur nulla quibusdam, suscipit ex iusto. Corporis nihil, modi! Voluptas, libero esse in.
       button.btn.btn-primary Call to Actions!
-  include=include
+  if page == 0
+    include components/trangchu.pug
+  else if page == 1
+    include components/about.pug
+  else if page == 2
+    include components/service.pug
+  else
+    include components/contact.pug
+
   .row.my-3
     .card.rounded.col-sm-4
       .card-body
